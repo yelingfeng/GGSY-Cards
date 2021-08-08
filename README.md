@@ -1,2 +1,0 @@
-# GGSY-Cards
-GGSY-Cards
