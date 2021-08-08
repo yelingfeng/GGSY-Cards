@@ -7,7 +7,7 @@ import path from 'path'
 const config: UserConfig = {
   resolve: {
     alias: {
-      'my-lib/': `${path.resolve(
+      'ggsy-cards/': `${path.resolve(
         __dirname,
         '../dist/es'
       )}/`,

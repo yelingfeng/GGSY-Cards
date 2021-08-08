@@ -63,14 +63,17 @@ export default (): Plugin => {
         }
       )
       /**
-       * replace my-lib
+       * replace ggsy-cards
        */
-      build.onResolve({ filter: /^my-lib\/.*/ }, (args) => {
-        return {
-          path: args.path.replace('my-lib/', '../'),
-          external: true,
+      build.onResolve(
+        { filter: /^ggsy-cards\/.*/ },
+        (args) => {
+          return {
+            path: args.path.replace('ggsy-cards/', '../'),
+            external: true,
+          }
         }
-      })
+      )
 
       build.onLoad(
         { filter: /\.vue$/, namespace: 'vue' },

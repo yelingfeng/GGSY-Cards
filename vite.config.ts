@@ -42,7 +42,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'my-lib/':
+      'ggsy-cards/':
         process.env.NODE_ENV !== 'preview'
           ? `${path.resolve(__dirname, './src/packages')}/`
           : `${path.resolve(__dirname, './dist/es')}/`,

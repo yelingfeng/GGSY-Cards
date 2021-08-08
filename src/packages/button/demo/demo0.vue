@@ -5,7 +5,7 @@ export default {
 }
 </script>
 <script setup lang="ts">
-import MyButton from 'my-lib/button'
+import MyButton from 'ggsy-cards/button'
 </script>
 
 <template>

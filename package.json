@@ -1,6 +1,6 @@
 {
-  "name": "my-lib",
-  "version": "0.0.0",
+  "name": "ggsy-cards",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite --host",
     "serve": "vite preview",
@@ -25,9 +25,9 @@
     "dist",
     "src"
   ],
-  "main": "dist/lib/my-lib.umd.js",
-  "module": "dist/es/my-lib.esm.js",
-  "typings": "dist/types/my-lib.d.ts",
+  "main": "dist/lib/ggsy-cards.umd.js",
+  "module": "dist/es/ggsy-cards.esm.js",
+  "typings": "dist/types/ggsy-cards.d.ts",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",

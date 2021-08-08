@@ -12,7 +12,7 @@ const outPubOptions = {
   },
 }
 
-const input = 'src/packages/my-lib.ts'
+const input = 'src/packages/ggsy-cards.ts'
 
 const getPlugins = () => [
   replace({
@@ -35,7 +35,7 @@ const getPlugins = () => [
   alias({
     entries: [
       {
-        find: /^(my-lib\/)(.*)/,
+        find: /^(ggsy-cards\/)(.*)/,
         replacement: `${path.resolve(
           __dirname,
           '../src/packages'
@@ -57,7 +57,7 @@ const configs = []
 configs.push({
   input,
   output: {
-    file: `dist/es/my-lib.esm.js`,
+    file: `dist/es/ggsy-cards.esm.js`,
     format: 'es',
     ...outPubOptions,
   },
@@ -71,9 +71,9 @@ configs.push({
 configs.push({
   input,
   output: {
-    file: `dist/lib/my-lib.umd.js`,
+    file: `dist/lib/ggsy-cards.umd.js`,
     format: 'umd',
-    name: `my-lib`,
+    name: `ggsy-cards`,
     ...outPubOptions,
   },
   plugins: getPlugins(),

@@ -6,7 +6,7 @@ class: 'button-doc'
 ## use
 
 ```javascript
-import { Button } from 'my-lib'
+import { Button } from 'ggsy-cards'
 
 Vue.creatApp().use(Button.name, Button)
 ```

@@ -14,7 +14,7 @@
     "declarationDir": "dist/types",
     "outDir": "dist",
     "paths": {
-      "my-lib/*": [
+      "ggsy-cards/*": [
         "./src/packages/*"
       ],
       "dist/*": [

@@ -12,12 +12,19 @@ const showHero = computed(() => {
     heroText,
     tagline,
     actionLink,
-    actionText
+    actionText,
   } = frontmatter.value
-  return heroImage || heroText || tagline || (actionLink && actionText)
+  return (
+    heroImage ||
+    heroText ||
+    tagline ||
+    (actionLink && actionText)
+  )
 })
 
-const heroText = computed(() => frontmatter.value.heroText || site.value.title)
+const heroText = computed(
+  () => frontmatter.value.heroText || site.value.title
+)
 
 const container = ref<HTMLElement>()
 const inner = ref<HTMLElement>()
@@ -28,42 +35,93 @@ onMounted(() => {
 
 <template>
   <header v-if="showHero" class="home-hero">
-    <section class="
+    <section
+      class="
         container
         mx-auto
         flex
-        <lg:flex-row
-        <lg:justify-center
-        <md:flex-col
-        <md:items-center
+        <lg:flex-row <lg:justify-center
+        <md:flex-col <md:items-center
       "
     >
       <div ref="container" class="w-1/2 <sm:w-auto">
         <div ref="inner" class="inner">
-          <img src="/banner.png" class="block">
+          <img src="/banner.jpg" class="block" />
         </div>
       </div>
-      <div class="w-1/2 flex flex-col justify-center items-start p-16 <sm:w-full <sm:items-center <sm:p-0">
-        <p v-if="heroText" class="relative font-sans text-6xl <md:text-3xl <md:text-center <md:w-full">
-          {{ heroText }} <sub class="absolute top-0 -right-16 text-2xl animate-text <sm:text-sm <sm:right-12">seed</sub>
+      <div
+        class="
+          w-1/2
+          flex flex-col
+          justify-center
+          items-start
+          p-16
+          <sm:w-full <sm:items-center <sm:p-0
+        "
+      >
+        <p
+          v-if="heroText"
+          class="
+            relative
+            font-sans
+            text-6xl
+            <md:text-3xl <md:text-center <md:w-full
+          "
+        >
+          {{ heroText }}
+          <sub
+            class="
+              absolute
+              top-0
+              -right-16
+              text-2xl
+              animate-text
+              <sm:text-sm <sm:right-12
+            "
+            >seed</sub
+          >
         </p>
-        <p v-if="frontmatter.tagline" class="text-base text-gray-500 lg:text-left">
+        <p
+          v-if="frontmatter.tagline"
+          class="text-base text-gray-500 lg:text-left"
+        >
           {{ frontmatter.tagline }}
         </p>
-        <div class="home-text-action <sm:w-full <sm:flex <sm:flex-col">
+        <div
+          class="
+            home-text-action
+            <sm:w-full <sm:flex <sm:flex-col
+          "
+        >
           <NavLink
-            v-if="frontmatter.actionLink && frontmatter.actionText"
-            :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
+            v-if="
+              frontmatter.actionLink &&
+              frontmatter.actionText
+            "
+            :item="{
+              link: frontmatter.actionLink,
+              text: frontmatter.actionText,
+            }"
             class="action overflow-hidden rounded-full"
           />
 
           <NavLink
-            v-if="frontmatter.altActionLink && frontmatter.altActionText"
+            v-if="
+              frontmatter.altActionLink &&
+              frontmatter.altActionText
+            "
             :item="{
               link: frontmatter.altActionLink,
-              text: frontmatter.altActionText
+              text: frontmatter.altActionText,
             }"
-            class="action alt overflow-hidden rounded-full <md:ml-0 lg:ml-4"
+            class="
+              action
+              alt
+              overflow-hidden
+              rounded-full
+              <md:ml-0
+              lg:ml-4
+            "
           />
         </div>
       </div>
@@ -198,7 +256,8 @@ onMounted(() => {
   animation: animate 2s linear infinite;
 }
 @keyframes animate {
-  0%, 100% {
+  0%,
+  100% {
     text-shadow: -1px -1px 0 #0ff, 1px 1px 0 #f00;
   }
   25% {
