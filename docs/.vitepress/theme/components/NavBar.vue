@@ -5,9 +5,7 @@ import { useRepo } from '../composables/repo'
 import NavBarTitle from './NavBarTitle.vue'
 import NavLinks from './NavLinks.vue'
 import ToggleSideBarButton from './ToggleSideBarButton.vue'
-import GithubLink from './GithubLink.vue'
 import DarkSwitch from './DarkSwitch.vue'
-import LangSwitch from './LangSwitch.vue'
 
 defineEmits(['toggle'])
 
@@ -16,19 +14,29 @@ defineProps({
 })
 
 const repo = useRepo()
-const isGithub = () => repo.value?.text.toLowerCase() === 'github'
+const isGithub = () =>
+  repo.value?.text.toLowerCase() === 'github'
 
 const { y } = useWindowScroll()
 const shadowStyle = computed(() => {
   return {
-    boxShadow: `0 0 5px rgb(10 16 20 / ${ y.value / 10 > 10 ? 10 : y.value / 10 }%)`
+    boxShadow: `0 0 5px rgb(10 16 20 / ${
+      y.value / 10 > 10 ? 10 : y.value / 10
+    }%)`,
   }
 })
 </script>
 
 <template>
-  <header class="nav-bar" :class="[!showSidebar ? 'pl-1.5rem' : 'pl-16']" :style="shadowStyle">
-    <ToggleSideBarButton v-show="showSidebar" @toggle="$emit('toggle')" />
+  <header
+    class="nav-bar"
+    :class="[!showSidebar ? 'pl-1.5rem' : 'pl-16']"
+    :style="shadowStyle"
+  >
+    <ToggleSideBarButton
+      v-show="showSidebar"
+      @toggle="$emit('toggle')"
+    />
 
     <NavBarTitle />
 
@@ -39,9 +47,7 @@ const shadowStyle = computed(() => {
     </div>
 
     <div class="nav-icons flex items-center gap-2">
-      <GithubLink v-if="repo && isGithub()" :item="repo" />
       <DarkSwitch />
-      <LangSwitch />
     </div>
 
     <slot name="search" />
@@ -92,6 +98,6 @@ const shadowStyle = computed(() => {
 
 .nav-icons {
   margin-left: 12px;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 </style>

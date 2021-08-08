@@ -72,15 +72,15 @@ module.exports = {
 
   lang: 'zh-CN',
   themeConfig: {
-    repo: 'https://github.com/yelingfeng/ggsy-cards', // replace the repo link
+    repo: 'https://github.com/yelingfeng/GGSY-Cards', // replace the repo link
     docsBranch: 'master',
     editLinks: true,
     editLinkText: '为此文档提供修改建议',
     logo: '/logo.jpg',
     nav: [{ text: '卡牌库', link: '/zh-CN/components/' }],
-    navEn: [
-      { text: 'Components', link: '/en-US/components/' },
-    ],
+    // navEn: [
+    //   { text: 'Components', link: '/en-US/components/' },
+    // ],
     sidebar: {
       '/zh-CN/components/': [
         {
@@ -88,28 +88,28 @@ module.exports = {
           link: '/zh-CN/components/',
         },
         {
-          text: '快速开始',
+          text: 'GGSY',
           link: '/zh-CN/components/quick-start',
         },
         {
-          text: '组件',
+          text: '卡牌库',
           children: zhComponentDocs,
         },
       ],
-      '/en-US/components/': [
-        {
-          text: 'Changelog',
-          link: '/en-US/components/',
-        },
-        {
-          text: 'QuickStart',
-          link: '/en-US/components/quick-start',
-        },
-        {
-          text: 'COMPONENTS',
-          children: enComponentDocs,
-        },
-      ],
+      // '/en-US/components/': [
+      //   {
+      //     text: 'Changelog',
+      //     link: '/en-US/components/',
+      //   },
+      //   {
+      //     text: 'QuickStart',
+      //     link: '/en-US/components/quick-start',
+      //   },
+      //   {
+      //     text: 'COMPONENTS',
+      //     children: enComponentDocs,
+      //   },
+      // ],
     },
   },
 

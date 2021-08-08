@@ -1,27 +1,24 @@
 ---
 class: 'button-doc'
 ---
-# Button 按钮
+# Cards
 
-## 引入
+## 魏
 
-```javascript
-import { Button } from 'ggsy-cards'
+<div align="center">
+  <img src="/guojia.jpg" style="width:200px;height:300px" />
+</div> 
 
-Vue.creatApp().use(Button.name, Button)
-```
+## 群
+<div align="center">
+  <img src="/qun/001.jpg" style="width:200px;height:300px" />
+  <img src="/qun/002.jpg" style="width:200px;height:300px" />
+  <img src="/qun/003.jpg" style="width:200px;height:300px"/>
+  <img src="/qun/004.jpg" style="width:200px;height:300px"/>
+  <img src="/qun/005.jpg" style="width:200px;height:300px"/>
+  <img src="/qun/006.jpg" style="width:200px;height:300px"/>
+  <img src="/qun/007.jpg" style="width:200px;height:300px"/>
+  <img src="/qun/008.jpg" style="width:200px;height:300px"/>
+</div> 
 
-## 案例
 
-<demo-wrapper
-  src="src/packages/button/demo"
-  :demos="demos"
-/>
-
-<script setup>
-const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue')
-</script>
-
-## props
-
-## event
