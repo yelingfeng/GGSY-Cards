@@ -31,12 +31,12 @@ const enComponentDocs = componentDocs.map((item) => ({
   link: '/en-US/components/' + item.link,
 }))
 
-const REPO_BASE_URL = '/ggsy-cards/'
+const REPO_BASE_URL = '/GGSY-Cards/'
 
 module.exports = {
   base: process.env.VERCEL_BUILD ? '/' : REPO_BASE_URL,
   title: 'FMB',
-  description: 'GGSY-card Page',
+  description: 'GGSY-cards Page',
   head: [
     [
       'link',
